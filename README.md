@@ -7,28 +7,28 @@ This project utilizes a Python script to explore and provide analysis on U.S. Bi
 
 The data analysis focuses on these key data points in order, which are taken directly from Udacity's project details:
 
-### Popular times of travel (i.e., occurs most often in the start time)**
+### Popular times of travel (i.e., occurs most often in the start time)
 
-**most common month
-  most common day of week
-  most common hour of day**
+**Most common month**
+**Most common day of week**
+**Most common hour of day**
 
 ### Popular stations and trip 
 
-**most common start station
-  most common end station
-  most common trip from start to end**
+**Most common start station**
+**Most common end station**
+**Most common trip from start to end**
 
 ### Trip duration 
 
-**total travel time
-  average travel time**
+**Total travel time**
+**Average travel time**
 
 ### User info
 
-**counts of each user type
- counts of each gender (only available for NYC and Chicago)
- earliest, most recent, most common year of birth (only available for NYC and Chicago)**
+**Counts of each user type**
+**Counts of each gender (only available for NYC and Chicago)**
+**Earliest, most recent, most common year of birth (only available for NYC and Chicago)**
 
 The script is interactive and prompts for user input, which dictates what data is shown.  The user also has the option to view raw data from the .csv files at the end.
 
