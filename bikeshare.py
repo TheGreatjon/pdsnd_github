@@ -74,6 +74,9 @@ def load_data(city, month, day):
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
+    #This has been added to pre-remove NaNs for faster query speed later.
+    df.dropna()
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -241,9 +244,9 @@ def main():
         user_stats(df, city)
         
         #This section of code was added to the main function to prompt for raw data review; a new def for raw_data was created to make it work.       
-        data_prompt = input("\nWant to see individual trip data? If so, please type 'yes' (no quotes); if not, type anything to return to restart: ")
+        raw_data_prompt = input("\nWant to see individual trip data? If so, please type 'yes' (no quotes); if not, type anything to return to restart: ")
                             
-        if data_prompt.lower() == 'yes':
+        if raw_data_prompt.lower() == 'yes':
             raw_data(df)
         restart = input("\nWould you like to restart? If so, please type 'yes' (no quotes), otherwise, type anything to quit: ")
         if restart.lower() != 'yes':
