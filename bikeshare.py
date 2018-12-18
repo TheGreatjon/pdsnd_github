@@ -74,6 +74,9 @@ def load_data(city, month, day):
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
 
+    #This has been added to pre-remove NaNs for faster query speed later.
+    df.dropna()
+
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
